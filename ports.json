@@ -1,0 +1,193 @@
+{
+  "ports": [
+    {
+      "id": "ghostty",
+      "name": "Ghostty",
+      "category": "Terminals",
+      "description": "Native configuration with opacity and background blur support.",
+      "status": "Official / Core",
+      "link": "https://github.com/sagewood-theme/sagewood-ghostty",
+      "tags": ["terminal", "macOS", "Linux"]
+    },
+    {
+      "id": "kitty",
+      "name": "Kitty",
+      "category": "Terminals",
+      "description": "Full color palette definition with tab bar and border customization.",
+      "status": "Official / Core",
+      "link": "https://github.com/sagewood-theme/sagewood-kitty",
+      "tags": ["terminal", "cross-platform"]
+    },
+    {
+      "id": "alacritty",
+      "name": "Alacritty",
+      "category": "Terminals",
+      "description": "Clean YAML/TOML color scheme configuration.",
+      "status": "Official / Core",
+      "link": "https://github.com/sagewood-theme/sagewood-alacritty",
+      "tags": ["terminal", "rust"]
+    },
+    {
+      "id": "neovim",
+      "name": "Neovim",
+      "category": "Editors & Notes",
+      "description": "Complete Lua theme plugin with syntax highlighting and treesitter support.",
+      "status": "Official / Core",
+      "link": "https://github.com/sagewood-theme/sagewood-neovim",
+      "tags": ["editor", "lua", "treesitter"]
+    },
+    {
+      "id": "vscode",
+      "name": "VS Code",
+      "category": "Editors & Notes",
+      "description": "Published extension theme with token color mapping and UI element matching.",
+      "status": "Official / Core",
+      "link": "https://github.com/sagewood-theme/sagewood-vscode",
+      "tags": ["editor", "extension"]
+    },
+    {
+      "id": "firefox",
+      "name": "Firefox",
+      "category": "Browsers & Email",
+      "description": "Official add-on accepted on Mozilla Add-ons store with clean dark sage toolbars.",
+      "status": "AMO Published",
+      "link": "https://github.com/sagewood-theme/sagewood-firefox",
+      "tags": ["browser", "amo-approved"]
+    },
+    {
+      "id": "chrome",
+      "name": "Chrome",
+      "category": "Browsers & Email",
+      "description": "Manifest v3 theme extension for Chrome, Edge, and Brave.",
+      "status": "Official / Core",
+      "link": "https://github.com/sagewood-theme/sagewood-chrome",
+      "tags": ["browser", "chromium"]
+    },
+    {
+      "id": "starship",
+      "name": "Starship Prompt",
+      "category": "Shells & Prompt",
+      "description": "Custom palette integration for git status, directories, and execution time.",
+      "status": "Official / Core",
+      "link": "https://github.com/sagewood-theme/sagewood-starship",
+      "tags": ["shell", "prompt"]
+    },
+    {
+      "id": "wezterm",
+      "name": "WezTerm",
+      "category": "Terminals",
+      "description": "Lua configuration file mapping all Sagewood palette tokens.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-wezterm",
+      "tags": ["terminal", "lua"]
+    },
+    {
+      "id": "warp",
+      "name": "Warp",
+      "category": "Terminals",
+      "description": "Warp theme YAML file with dark sage background and custom prompt colors.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-warp",
+      "tags": ["terminal"]
+    },
+    {
+      "id": "tmux",
+      "name": "Tmux",
+      "category": "Terminals",
+      "description": "Clean, status-bar stealth configuration matching active window borders.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-tmux",
+      "tags": ["multiplexer"]
+    },
+    {
+      "id": "btop",
+      "name": "Btop",
+      "category": "TUI & System",
+      "description": "Custom btop .theme file for system graphs and process highlights.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-btop",
+      "tags": ["tui", "system-monitor"]
+    },
+    {
+      "id": "yazi",
+      "name": "Yazi",
+      "category": "TUI & System",
+      "description": "Modern TOML theme file for border styles, mode indicators, and file preview colors.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-yazi",
+      "tags": ["tui", "file-manager"]
+    },
+    {
+      "id": "lazygit",
+      "name": "LazyGit",
+      "category": "TUI & System",
+      "description": "Custom YAML theme mapping active border colors and selected line highlights.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-lazygit",
+      "tags": ["tui", "git"]
+    },
+    {
+      "id": "cava",
+      "name": "Cava",
+      "category": "TUI & System",
+      "description": "Audio visualizer configuration with sage gradient bars.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-cava",
+      "tags": ["tui", "audio"]
+    },
+    {
+      "id": "sketchybar",
+      "name": "Sketchybar",
+      "category": "Desktop & UI",
+      "description": "macOS status bar configuration matching inactive window borders and muted text.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-sketchybar",
+      "tags": ["macOS", "status-bar"]
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "category": "Editors & Notes",
+      "description": "Custom CSS theme mapping graph views, callouts, and markdown editor components.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-obsidian",
+      "tags": ["notes", "css"]
+    },
+    {
+      "id": "nighttab",
+      "name": "NightTab",
+      "category": "Browsers & Email",
+      "description": "JSON color scheme preset for custom browser new tab pages.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-nighttab",
+      "tags": ["browser", "new-tab"]
+    },
+    {
+      "id": "thunderbird",
+      "name": "Thunderbird",
+      "category": "Browsers & Email",
+      "description": "400+ lines of custom userChrome.css covering folder panes, thread lists, and compose views.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-thunderbird",
+      "tags": ["email", "userchrome"]
+    },
+    {
+      "id": "fish",
+      "name": "Fish Shell",
+      "category": "Shells & Prompt",
+      "description": "Native Fish color variables setup script for commands, syntax, and options.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-fish",
+      "tags": ["shell"]
+    },
+    {
+      "id": "zsh-syntax",
+      "name": "Zsh Syntax Highlighting",
+      "category": "Shells & Prompt",
+      "description": "Muted sage syntax highlighting configuration for active zsh commands and aliases.",
+      "status": "Officially Supported",
+      "link": "https://github.com/sagewood-theme/sagewood-zsh-syntax",
+      "tags": ["shell", "zsh"]
+    }
+  ]
+}

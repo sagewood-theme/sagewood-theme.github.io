@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagewood Theme Ports</title>
+  <style>
+    :root {
+      --bg-base: #222a26;
+      --bg-mantle: #1c231f;
+      --bg-card: #28322c;
+      --border: #3b4a43;
+      --sage: #a8b59b;
+      --text: #d2ded7;
+      --subtext: #8da7b3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text);
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    h1 span {
+      color: var(--sage);
+    }
+
+    p.subtitle {
+      color: var(--subtext);
+    }
+
+    .ports-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .port-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .port-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .category {
+      font-size: 0.75rem;
+      color: var(--subtext);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+
+    .status {
+      font-size: 0.8rem;
+      color: var(--subtext);
+    }
+
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--bg-mantle);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .github-btn:hover {
+      background-color: var(--sage);
+      color: var(--bg-mantle);
+    }
+
+    .github-btn svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    #error-msg {
+      color: #e06c75;
+      text-align: center;
+      grid-column: 1 / -1;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Sagewood <span>Ports</span></h1>
+      <p class="subtitle">All active ecosystem ports dynamically loaded from ports.json</p>
+    </header>
+
+    <div class="ports-grid" id="portsGrid">
+      <p id="error-msg">Failed to load <code>ports.json</code>.</p>
+    </div>
+  </div>
+
+  <script>
+    fetch('ports.json')
+      .then(res => {
+        if (!res.ok) throw new Error();
+        return res.json();
+      })
+      .then(data => {
+        const grid = document.getElementById('portsGrid');
+        grid.innerHTML = (data.ports || []).map(port => `
+          <div class="port-card">
+            <div>
+              <div class="port-title">${port.name}</div>
+              <div class="category">${port.category}</div>
+              <div class="description">${port.description}</div>
+            </div>
+
+            <div class="card-footer">
+              <span class="status">${port.status}</span>
+              <a href="${port.link}" target="_blank" rel="noopener noreferrer" class="github-btn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        `).join('');
+      })
+      .catch(() => {
+        document.getElementById('error-msg').style.display = 'block';
+      });
+  </script>
+</body>
+</html>
