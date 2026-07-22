@@ -51,7 +51,7 @@
       "category": "Browsers & Email",
       "description": "Official add-on accepted on Mozilla Add-ons store with clean dark sage toolbars.",
       "status": "AMO Published",
-      "link": "https://github.com/sagewood-theme/sagewood-firefox",
+      "link": "https://github.com/sagewood-theme/browser-themes/tree/main/firefox",
       "tags": ["browser", "amo-approved"]
     },
     {
@@ -60,7 +60,7 @@
       "category": "Browsers & Email",
       "description": "Manifest v3 theme extension for Chrome, Edge, and Brave.",
       "status": "Official / Core",
-      "link": "https://github.com/sagewood-theme/sagewood-chrome",
+      "link": "https://github.com/sagewood-theme/browser-themes/tree/main/chrome-based-browsers",
       "tags": ["browser", "chromium"]
     },
     {
@@ -159,7 +159,7 @@
       "category": "Browsers & Email",
       "description": "JSON color scheme preset for custom browser new tab pages.",
       "status": "Officially Supported",
-      "link": "https://github.com/sagewood-theme/sagewood-nighttab",
+      "link": "https://github.com/sagewood-theme/browser-themes/tree/main/nighttab",
       "tags": ["browser", "new-tab"]
     },
     {
