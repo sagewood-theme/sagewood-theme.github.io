@@ -6,7 +6,7 @@
       "category": "Terminals",
       "description": "Native configuration with opacity and background blur support.",
       "status": "Official / Core",
-      "link": "https://github.com/sagewood-theme/sagewood-ghostty",
+      "link": "https://github.com/sagewood-theme/terminal-themes/tree/main/ghostty",
       "tags": ["terminal", "macOS", "Linux"]
     },
     {
@@ -15,7 +15,7 @@
       "category": "Terminals",
       "description": "Full color palette definition with tab bar and border customization.",
       "status": "Official / Core",
-      "link": "https://github.com/sagewood-theme/sagewood-kitty",
+      "link": "https://github.com/sagewood-theme/terminal-themes/tree/main/kitty",
       "tags": ["terminal", "cross-platform"]
     },
     {
@@ -24,7 +24,7 @@
       "category": "Terminals",
       "description": "Clean YAML/TOML color scheme configuration.",
       "status": "Official / Core",
-      "link": "https://github.com/sagewood-theme/sagewood-alacritty",
+      "link": "https://github.com/sagewood-theme/terminal-themes/tree/main/alacritty",
       "tags": ["terminal", "rust"]
     },
     {
@@ -33,7 +33,7 @@
       "category": "Editors & Notes",
       "description": "Complete Lua theme plugin with syntax highlighting and treesitter support.",
       "status": "Official / Core",
-      "link": "https://github.com/sagewood-theme/sagewood-neovim",
+      "link": "https://github.com/sagewood-theme/IDE-themes/tree/main/neovim",
       "tags": ["editor", "lua", "treesitter"]
     },
     {
@@ -42,7 +42,7 @@
       "category": "Editors & Notes",
       "description": "Published extension theme with token color mapping and UI element matching.",
       "status": "Official / Core",
-      "link": "https://github.com/sagewood-theme/sagewood-vscode",
+      "link": "https://github.com/sagewood-theme/IDE-themes/tree/main/vscode",
       "tags": ["editor", "extension"]
     },
     {
